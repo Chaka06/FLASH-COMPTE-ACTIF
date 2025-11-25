@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--======BOXICON LINK======-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--========================-->
+
+    <!--======GOOGLE FONT=======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--========================-->
+    <title>Notifications</title>
+    <link rel="stylesheet" href="autres.css">
+    <link rel="shortcut icon" href="faviiiiii.ico" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 0;
+            padding-top: 80px; /* Espace pour compenser la hauteur du header */
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #3db03f;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-top img {
+            height: 40px;
+        }
+        .header-top .right-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-top .right-icons img {
+            height: 30px;
+        }
+        .header-top .right-icons img:first-child {
+            
+            margin-left: 25px;
+        }
+        .header-bottom {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff00;
+            padding: 10px 0;
+            border-top: 1px solid #dddddd00;
+        }
+        .header-bottom a {
+            text-decoration: none;
+            color: #fffefe;
+            font-weight: bold;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        .header-bottom a:hover {
+            background-color: #07660f;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .header-top img {
+                height: 30px;
+            }
+            .header-top .right-icons img {
+                height: 25px;
+            }
+            .header-bottom a {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-top img {
+                height: 25px;
+            }
+            .header-top .right-icons img {
+                height: 20px;
+            }
+            .header-bottom a {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <a href="Comptes.html"><img src="https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png" alt="Logo Banque"></a>
+            <div class="right-icons">
+                <a href="autres.html"><img src="notification.png" alt="Logo Notification"></a>
+                <a href="index.html"><img src="deconnexion.png" alt="Logo Déconnexion"></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="Comptes.html">Comptes</a>
+            <a href="emprunter.html">Emprunter</a>
+            <a href="epargner.html">Épargner</a>
+            <a href="assurer.html">Assurer</a>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+
+    <!--========NOT DE LA BANQUE ET DOC EN PDF ==========-->
+    <div class="page-wrapper">
+
+
+       
+        <div class="container">
+            <!--
+            
+            <div class="document-item">
+                    <h3>Rejet de virement</h3>
+                    <a href="REJET DE VIREMENT.pdf" download>Télécharger</a>
+                </div>
+
+                -->
+
+            
+            
+
+            <section id="news">
+                <h2>Nouveautés</h2>
+                <div class="news-item">
+                    <h3>Nouvelle fonctionnalité de transfert rapide</h3>
+                    <p>Découvrez notre nouvelle fonctionnalité de transfert rapide qui vous permet d'envoyer de l'argent en quelques secondes.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Mise à jour de sécurité</h3>
+                    <p>Nous avons renforcé nos mesures de sécurité pour protéger vos informations personnelles.</p>
+                </div>
+            </section>
+
+            <section id="messages">
+                
+
+                <h2>Messages</h2>
+                <div class="message-item">
+                    <h3>Message du 12 Janvier 2025</h3>
+                    <p>Nous vous informons de l'activation de votre nouvelle carte bancaire.</p>
+                </div>
+                <div class="message-item">
+                    <h3>Message du 18 Janvier 2025</h3>
+                    <p>Votre relevé de compte de Décembre 2024 est maintenant disponible.</p>
+                </div>
+            </section>
+
+            <!--
+
+            <section id="documents">
+                <h2>Vos documents</h2>
+                <div class="document-item">
+                    <h3>Relevé de compte Décembre 2023</h3>
+                    <a href="rib.pdf" download>Télécharger</a>
+                </div>
+                 -->
+                
+            </section>
+           
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <br>
+        <br>
+        <br>
+    
+
+
+
+
+
+
+
+
+
+    <!--=========FOOTER========-->
+          <!-- Votre contenu principal ici -->
+
+          <footer class="footer">
+            <div class="logo">
+              <a href="Comptes.html">
+                <i class='bx bx-home'></i>
+                <div class="sous-titre">Accueil</div>
+              </a>
+            </div>
+            <div class="logo">
+              <a href="virements.html">
+                <i class='bx bx-transfer'></i>
+                <div class="sous-titre">Virements</div>
+              </a>
+            </div>
+            <div class="logo">
+              <a href="cartes.html">
+                <i class='bx bx-credit-card'></i>
+                <div class="sous-titre">Cartes</div>
+              </a>
+            </div>
+            <div class="logo">
+              <a href="contact.html">
+                <i class='bx bx-chat'></i>
+                <div class="sous-titre">Contact</div>
+              </a>
+            </div>
+            <div class="logo">
+              <a href="autres.html">
+                <i class='bx bx-menu'></i>
+                <div class="sous-titre">Autres</div>
+              </a>
+            </div>
+          </footer>
+          
+ 
+
+
+    
+
+    <script src="autres.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

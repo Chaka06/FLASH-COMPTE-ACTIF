@@ -1,0 +1,375 @@
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*/
+
+
+
+
+
+
+
+/* Reset des marges et des paddings pour le header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajuste le padding selon tes besoins */
+    background-color: #ffffff; /* Couleur de fond du header */
+    border-bottom: 1px solid #ccc; /* Bordure en bas du header */
+    position: fixed; /* Rend le header fixe */
+    width: 90%; /* Occupe toute la largeur de l'écran */
+    top: 0; /* Aligne le header en haut de la fenêtre */
+    z-index: 1000; /* Assure que le header est au-dessus du reste du contenu */
+}
+
+/* Style du trait vertical */
+.vertical-hr {
+    height: 30px; /* Ajuste la hauteur du trait vertical */
+    margin: 0 10px; /* Ajuste la marge autour du trait vertical */
+    border-left: 1px solid #888; /* Couleur et style de la bordure du trait */
+}
+
+/* Style des logos */
+.logo img,
+.search-logo img,
+.other-logo img {
+    max-height: 30px; /* Ajuste la hauteur maximale des logos */
+}
+
+/* Style pour aligner correctement les éléments à droite */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*=========LES CADRANTS==========*/
+/* Style pour le container des deux côtés */
+.container {
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    display: flex;
+    width: 97%;
+    
+    padding-top: 0px; /* Ajuste pour laisser de l'espace en dessous du header fixe */
+}
+
+/* Style pour le côté gauche (65%) */
+.left-side {
+    width: 65%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #2b8142, #13c236c3); /* Dégradé de vert sombre à vert clair */
+    color: #fff; /* Couleur du texte pour contraster avec le dégradé */
+}
+
+/* Style pour le formulaire d'authentification */
+.authentication-form {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+}
+
+.authentication-form h2 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.authentication-form form {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+}
+
+.authentication-form label {
+    
+    margin-bottom: 10px;
+}
+
+.authentication-form input {
+    
+    
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    
+}
+
+.authentication-form .secret-code-container {
+    position: relative;
+}
+
+.authentication-form .secret-code-container input {
+    padding-right: 40px; /* Pour laisser de la place pour le bouton de suppression */
+}
+
+
+
+.authentication-form .numeric-keypad {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes pour le clavier numérique */
+    grid-template-rows: repeat(2, 1fr); /* 2 lignes pour le clavier numérique */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.authentication-form .key {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.authentication-form button[type="submit"] {
+    padding: 10px;
+    background-color: #137522ac;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.oublie{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+/* Media Query pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Les cadrants sont empilés en colonne */
+    }
+    .left-side, .right-side {
+        width: 91.5%; /* Les deux côtés occupent toute la largeur */
+    }
+}
+
+.right-side{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    padding: 2%;
+}
+
+.titres{
+    align-items: center;
+    font-weight: 30px;
+}
+
+.titr{
+    color: #2b8142;
+}
+
+.titi{
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.black{
+    font-weight: bold;
+}
+
+
+/*==========FOOTER==========*/
+.footer {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    background-color: #000000d2;
+    padding: 20px;
+    text-align: center;
+}
+
+.suivre{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: #ffffff;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer-links div {
+    margin: 10px 20px;
+    text-align: left;
+    position: relative;
+    flex: 1 1 200px;
+}
+.footer-links a.title {
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+
+.footer-links a.title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.footer-links a {
+    font-size: 12px;
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #a29e9e;
+}
+
+.footer-links a:hover {
+    transition: 0.4s;
+    color: #fff;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-links div {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links div {
+        flex: 1 1 90%;
+        max-width: 90%;
+    }
+}
+
+hr {
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+
+/*=============AUTRE PARTIE DU FOOTER==============*/
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer-links div {
+    margin: 10px 20px;
+    text-align: left;
+    position: relative;
+    flex: 1 1 200px;
+}
+
+
+
+.footer-links a.pario{
+    cursor: default;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #7aed38b9;
+    position: relative;
+    padding-left: 20px; 
+}
+
+.footer-links a.pario::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #54d50a;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+.footer-links a.title {
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+
+.footer-links a.title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.footer-links a {
+    font-size: 12px;
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #a29e9e;
+}
+
+.footer-links a:hover {
+    transition: 0.4s;
+    color: #ffffffb9;
+}
+
+.titresss{
+    color: #a29e9e;
+    text-align: center;
+    font-size: 11px;
+    padding: 16px;
+}
+

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--======BOXICON LINK======-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--========================-->
+
+    <!--======GOOGLE FONT=======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--========================-->
+    <title>Mes comptes</title>
+    <link rel="stylesheet" href="comptes.css">
+    <link rel="shortcut icon" href="faviiiiii.ico" type="image/x-icon">
+
+
+    <!--==========CLASSE MODALE ALERTE=========-->
+    
+
+    
+
+  <script>
+      window.onload = function() {
+          var modal = document.getElementById("myModal");
+          var span = document.getElementsByClassName("close-unique")[0];
+          modal.style.display = "block";
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+      }
+  </script>
+    <!--=======================================-->
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 0;
+            padding-top: 80px; /* Espace pour compenser la hauteur du header */
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #3db03f;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-top img {
+            height: 40px;
+        }
+        .header-top .right-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-top .right-icons img {
+            height: 30px;
+        }
+        .header-top .right-icons img:first-child {
+            
+            margin-left: 25px;
+        }
+        .header-bottom {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff00;
+            padding: 10px 0;
+            border-top: 1px solid #dddddd00;
+        }
+        .header-bottom a {
+            text-decoration: none;
+            color: #fffefe;
+            font-weight: bold;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        .header-bottom a:hover {
+            background-color: #07660f;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .header-top img {
+                height: 30px;
+            }
+            .header-top .right-icons img {
+                height: 25px;
+            }
+            .header-bottom a {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-top img {
+                height: 25px;
+            }
+            .header-top .right-icons img {
+                height: 20px;
+            }
+            .header-bottom a {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <a href="Comptes.html"><img class="logo" src="https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png"alt="Logo Banque"></a>
+            <div class="right-icons">
+                <a href="autres.html"><img src="notification.png" alt="Logo Notification"></a>
+                <a href="index.html"><img src="deconnexion.png" alt="Logo Déconnexion"></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="Comptes.html">Comptes</a>
+            <a href="emprunter.html">Emprunter</a>
+            <a href="epargner.html">Épargner</a>
+            <a href="assurer.html">Assurer</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+
+    <!--======ligne utlilisateur=========-->
+
+    <a href="#" class="user">
+        <div class="users">
+          <div class="ligne-utilisateur">
+            <img src="https://img.freepik.com/vecteurs-libre/cercle-bleu-utilisateur-blanc_78370-4707.jpg" alt="Photo de l'utilisateur" class="photo-utilisateur">
+            <div class="nom-utilisateur">DUSSEAU NATHALIE</div>
+          </div>
+        </div>
+      </a>
+      
+      <div id="modal-utilisateur" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="photo-utilisateur-modal">
+            <img src="https://img.freepik.com/vecteurs-libre/cercle-bleu-utilisateur-blanc_78370-4707.jpg" alt="Photo de l'utilisateur">
+          </div>
+          <div class="infos-modal">
+            <div class="nom">Dusseau</div>   
+            <div class="prenom">Nathalie</div>
+            <div>dusseaunathalie410@gmail.com</div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const userLink = document.querySelector('.user');
+    const modal = document.getElementById('modal-utilisateur');
+    const closeBtn = document.querySelector('.close');
+  
+    userLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.style.display = 'block'; 
+      fadeIn(modal);
+    });
+  
+    closeBtn.addEventListener('click', function() {
+      fadeOut(modal);
+    });
+  
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        fadeOut(modal);
+      }
+    });
+  
+    function fadeIn(element) {
+      var opacity = 0;
+      var timer = setInterval(function() {
+        if (opacity >= 1) {
+          clearInterval(timer);
+        }
+        element.style.opacity = opacity;
+        opacity += 0.1;
+      }, 50);
+    }
+  
+    function fadeOut(element) {
+      var opacity = 1;
+      var timer = setInterval(function() {
+        if (opacity <= 0) {
+          clearInterval(timer);
+          element.style.display = 'none';
+        }
+        element.style.opacity = opacity;
+        opacity -= 0.1;
+      }, 50);
+    }
+  });
+
+      </script>
+
+    <!--============================-->
+
+
+
+    <!--=========MES CARTES=========-->
+
+    
+        <div class="container">
+            <div class="cadre">
+              <div class="partie-gauche">
+                <img src="card.png" alt="Logo Visa 1" class="logo">
+              </div>
+              <div class="partie-droite">
+                <div class="ligne">
+                  <div class="gris">CB Evolut N° 1829 37XX XXXX 7878</div>
+                </div>
+                <div class="ligne">
+                  <div class="titre">...</div>
+                </div>
+                
+              </div>
+            </div>
+          
+            <div class="cadre">
+              <div class="partie-gauche">
+                <img src="card.png" alt="Logo Visa 2" class="logo">
+              </div>
+              <div class="partie-droite">
+                <div class="ligne">
+                  <div class="gris">CB Evolut N° 2931 73XX XXXX 8967</div>
+                </div>
+                <div class="ligne">
+                  <div class="titre">...</div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+           
+
+            <!--============AFFICHAGE SOLDE INTERACTIF==============-->
+            <div class="cadre1">
+              <div class="ligne">
+                  <div class="titre1">Solde:</div>
+                  <div class="montant"><span id="balance" class="statut-rouge"> 79.706 €</span></div>
+                  <div class="sous-titre1">N° **** 7878</div>
+              </div>
+          </div>
+          
+          <script>
+              // Initialisation du solde si non présent
+              if (!localStorage.getItem('balance')) {
+                  localStorage.setItem('balance', '79706'); // Solde initial en EUR
+              }
+          
+              // Fonction pour mettre à jour le solde
+              function updateBalance() {
+                  const balance = localStorage.getItem('balance');
+                  document.getElementById('balance').innerText = `${balance} €`;
+              }
+          
+              // Appeler la fonction pour afficher le solde initial
+              updateBalance();
+          </script>
+
+            <!--====================================================-->
+
+            <hr class="ligne-separation">
+            <div class="ligne1">
+              <div class="logo">
+                <img src="Cardfortis.jpeg" width="60px" alt="Logo">
+              </div>
+              <div class="infos">
+                <div class="titre1">CB Visa</div>
+                <div class="sous-titre1">N° **** 4321</div>
+                <div class="statut">Statut: <span class="statut-rouge">Actif</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!--=======================-->
+
+          <!--==========RIB==========-->
+          
+          <div class="cadr">
+    <div class="titrea">Relevé d'Identité Bancaire (RIB)</div>
+    <p></p>
+    <table class="tableau">
+    <tr>
+        <td class="libelle">IBAN:</td>
+        <td>FR68 5390 0754 7034</td>
+    </tr>
+    <tr>
+        <td class="libelle">BIC:</td>
+        <td>BNPAFRPPXXX</td>
+    </tr>
+    <tr>
+        <td class="libelle">TITULAIRE DU COMPTE:</td>
+        <td>DUSSEAU NATHALIE</td>
+    </tr>
+    <tr>
+        <td class="libelle">BANQUE:</td>
+        <td>BNP Paribas</td>
+    </tr>
+    <tr>
+        <td class="libelle">DOMICILIATION:</td>
+        <td>1 Pl. Darcy, 21000 Dijon, France</td>
+    </tr>
+</table>
+</div>
+        
+        
+        
+        
+        
+          </div>
+          <br>
+          <br>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--=========FOOTER========-->
+          <!-- Votre contenu principal ici -->
+
+<footer class="footer">
+    <div class="logo">
+      <a href="Comptes.html">
+        <i class='bx bx-home'></i>
+        <div class="sous-titre">Accueil</div>
+      </a>
+    </div>
+    <div class="logo">
+      <a href="virements.html">
+        <i class='bx bx-transfer'></i>
+        <div class="sous-titre">Virements</div>
+      </a>
+    </div>
+    <div class="logo">
+      <a href="cartes.html">
+        <i class='bx bx-credit-card'></i>
+        <div class="sous-titre">Cartes</div>
+      </a>
+    </div>
+    <div class="logo">
+      <a href="contact.html">
+        <i class='bx bx-chat'></i>
+        <div class="sous-titre">Contact</div>
+      </a>
+    </div>
+    <div class="logo">
+      <a href="autres.html">
+        <i class='bx bx-menu'></i>
+        <div class="sous-titre">Autres</div>
+      </a>
+    </div>
+  </footer>
+          
+ 
+
+
+    
+
+    <script src="comptes.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

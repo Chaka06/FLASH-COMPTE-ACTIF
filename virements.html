@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--======BOXICON LINK======-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--========================-->
+
+    <!--======GOOGLE FONT=======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="faviiiiii.ico" type="image/x-icon">
+    <!--========================-->
+    <title>Éffectuer un virement</title>
+    <link rel="stylesheet" href="virement.css">
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 0;
+            padding-top: 80px; /* Espace pour compenser la hauteur du header */
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #3db03f;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top img {
+            height: 40px;
+        }
+
+        .header-top .right-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-top .right-icons img {
+            height: 30px;
+        }
+
+        .header-top .right-icons img:first-child {
+            margin-left: 25px;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff00;
+            padding: 10px 0;
+            border-top: 1px solid #dddddd00;
+        }
+
+        .header-bottom a {
+            text-decoration: none;
+            color: #fffefe;
+            font-weight: bold;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .header-bottom a:hover {
+            background-color: #07660f;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header-top img {
+                height: 30px;
+            }
+
+            .header-top .right-icons img {
+                height: 25px;
+            }
+
+            .header-bottom a {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-top img {
+                height: 25px;
+            }
+
+            .header-top .right-icons img {
+                height: 20px;
+            }
+
+            .header-bottom a {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px; /* Width of modal */
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-icon {
+            margin-bottom: 15px;
+        }
+
+        .checkmark-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #9dd867;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 60px;
+        }
+
+        .checkmark {
+            font-size: 30px;
+            color: white;
+            line-height: 60px;
+        }
+
+        .modal-content p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #e04848;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-top">
+        <a href="Comptes.html"><img src="https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png" alt="Logo Banque"></a>
+        <div class="right-icons">
+            <a href="autres.html"><img src="notification.png" alt="Logo Notification"></a>
+            <a href="index.html"><img src="deconnexion.png" alt="Logo Déconnexion"></a>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <a href="Comptes.html">Comptes</a>
+        <a href="emprunter.html">Emprunter</a>
+        <a href="epargner.html">Épargner</a>
+        <a href="assurer.html">Assurer</a>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="container">
+    <div class="logo">
+        <img src="https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png" alt="Logo de la banque">
+    </div>
+    <form id="virementForm">
+        <!-- Formulaire pour le virement -->
+        <div class="form-group">
+            <h3>EFFECTUER UN VIREMENT <i class='bx bx-transfer-alt'></i></h3>
+            <label for="nomPrenom">Nom et Prénom du bénéficiaire :</label>
+            <input type="text" id="nomPrenom" name="nomPrenom" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse email du bénéficiaire :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="numeroCompte">Numéro de compte :</label>
+            <input type="text" id="numeroCompte" name="numeroCompte" required>
+        </div>
+        <div class="form-group">
+            <label for="montant">Montant du virement :</label>
+            <input type="number" id="montant" name="montant" required>
+        </div>
+        <div class="form-group">
+            <label for="numeroBIC">Numéro BIC du bénéficiaire :</label>
+            <input type="text" id="numeroBIC" name="numeroBIC" required>
+        </div>
+        <div class="form-group">
+            <label for="motif">Motif de la transaction :</label>
+            <select id="motif" name="motif" required>
+                <option value="ami proche">Ami proche</option>
+                <option value="membre de famille">Membre de famille</option>
+                <option value="achat de bien et service">Achat de bien et service</option>
+                <option value="autres">Autres</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" id="submitBtn" value="Envoyer">
+        </div>
+    </form>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <div class="checkmark-circle">
+                    <span class="checkmark">✓</span>
+                </div>
+            </div>
+            <p>Votre virement a bien été initié</p>
+            <button id="closeModalBtn">Fermer</button>
+        </div>
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("Jtj92QkfK6M1IoOp4"); // Remplacez par votre User ID EmailJS
+
+        document.getElementById('virementForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nomPrenom = document.getElementById('nomPrenom').value;
+            const email = document.getElementById('email').value;
+            const numeroCompte = document.getElementById('numeroCompte').value;
+            const montant = parseFloat(document.getElementById('montant').value);
+            const numeroBIC = document.getElementById('numeroBIC').value;
+            const motif = document.getElementById('motif').value;
+
+            const balance = parseFloat(localStorage.getItem('balance'));
+
+            if (montant > 0 && montant <= balance) {
+                // Mise à jour du solde
+                const newBalance = balance - montant;
+                localStorage.setItem('balance', newBalance.toFixed(2));
+
+                // Enregistrement de la transaction
+                const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+                const transaction = {
+                    date: new Date().toISOString(),
+                    label: `Virement vers ${nomPrenom}`,
+                    amount: `-${montant.toFixed(2)}`,
+                    email: email,
+                    numeroCompte: numeroCompte,
+                    numeroBIC: numeroBIC,
+                    motif: motif
+                };
+                transactions.push(transaction);
+                localStorage.setItem('transactions', JSON.stringify(transactions));
+
+                // Affichage de la modal de confirmation
+                showModal();
+
+                // Génération de la date d'initiation
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const dateInitiation = new Date().toLocaleDateString('fr-FR', options);
+
+                // Génération de la référence unique
+                const timestamp = new Date().getTime().toString().slice(-8);
+                const randomChars = Math.random().toString(36).substring(2, 6).toUpperCase();
+                const numeroReference = `BNP-${randomChars}${timestamp}`;
+
+                // Envoi de l'email de confirmation avec les variables du template
+                const templateParams = {
+                    to_email: email,
+                    nomPrenom: nomPrenom,
+                    montant: montant.toFixed(2),
+                    numeroCompte: numeroCompte,
+                    motif: motif,
+                    dateInitiation: dateInitiation,
+                    numeroReference: numeroReference
+                };
+
+                emailjs.send('service_bnp33', 'template_trn2dz1', templateParams)
+                    .then(function (response) {
+                        console.log('Email de confirmation envoyé avec succès !', response);
+                        // Générer le bordereau PDF
+                        generatePDF(transaction);
+                        // Réactiver le bouton Envoyer après l'envoi de l'email
+                        enableSubmitButton();
+                    }, function (error) {
+                        console.error('Erreur lors de l\'envoi de l\'email de confirmation :', error);
+                        // Réactiver le bouton Envoyer même en cas d'erreur
+                        enableSubmitButton();
+                    });
+            } else {
+                alert('Fonds insuffisants ou montant invalide.');
+            }
+        });
+
+        function showModal() {
+            document.getElementById("confirmation-modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("confirmation-modal").style.display = "none";
+        }
+
+        function generatePDF(transaction) {
+            const {jsPDF} = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text(`Date: ${new Date(transaction.date).toLocaleString()}`, 10, 10);
+            doc.text(`Nom et Prénom: ${transaction.label.split(' vers ')[1]}`, 10, 20);
+            doc.text(`Montant: ${transaction.amount}`, 10, 30);
+            doc.text(`Numéro de Compte: ${transaction.numeroCompte}`, 10, 40);
+            doc.text(`Numéro BIC: ${transaction.numeroBIC}`, 10, 50);
+            doc.text(`Motif: ${transaction.motif}`, 10, 60);
+
+            doc.save(`bordereau_virement_${transaction.date}.pdf`);
+        }
+
+        function enableSubmitButton() {
+            var submitButton = document.getElementById('submitBtn');
+            submitButton.disabled = false;
+            submitButton.value = 'Envoyer';
+        }
+
+        // Attach event listener to close button
+        document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+    })();
+</script>
+
+<!--=========FOOTER========-->
+<style>
+    /*==========FOOTER==========*/
+    /* Styles généraux */
+
+    /* Styles pour le footer */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #e3e3e3;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease; /* Transition de couleur pour le texte */
+    }
+
+    .logo a:hover {
+        color: red; /* Couleur rouge au survol */
+    }
+
+    .logo i {
+        font-size: 24px; /* Taille de l'icône */
+        margin-bottom: 5px; /* Espace sous l'icône */
+    }
+
+    .sous-titre {
+        font-size: 12px;
+    }
+</style>
+
+<footer class="footer">
+    <div class="logo">
+        <a href="Comptes.html">
+            <i class='bx bx-home'></i>
+            <div class="sous-titre">Accueil</div>
+        </a>
+    </div>
+    <div class="logo">
+        <a href="virements.html">
+            <i class='bx bx-transfer'></i>
+            <div class="sous-titre">Virements</div>
+        </a>
+    </div>
+    <div class="logo">
+        <a href="cartes.html">
+            <i class='bx bx-credit-card'></i>
+            <div class="sous-titre">Cartes</div>
+        </a>
+    </div>
+    <div class="logo">
+        <a href="contact.html">
+            <i class='bx bx-chat'></i>
+            <div class="sous-titre">Contact</div>
+        </a>
+    </div>
+    <div class="logo">
+        <a href="autres.html">
+            <i class='bx bx-menu'></i>
+            <div class="sous-titre">Autres</div>
+        </a>
+    </div>
+</footer>
+</body>
+</html>

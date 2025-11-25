@@ -1,0 +1,199 @@
+/*==========SERVICE CLIENTEL==============*/
+/* styles.css */
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* styles.css */
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    
+    
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    text-align: center;
+    color: #e90101;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1d0a0a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #eb4444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #a50101;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.contact-info p strong {
+    color: #140505;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .contact-info h2 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========FOOTER==========*/
+  /* Styles généraux */
+
+  
+   /* Styles pour le footer */
+   .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e3e3e3;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Transition de couleur pour le texte */
+  }
+  
+  .logo a:hover {
+    color: red; /* Couleur rouge au survol */
+  }
+  
+  .logo i {
+    font-size: 24px; /* Taille de l'icône */
+    margin-bottom: 5px; /* Espace sous l'icône */
+  }
+  
+  .sous-titre {
+    font-size: 12px;
+  }

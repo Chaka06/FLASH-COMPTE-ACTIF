@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--======BOXICON LINK======-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--========================-->
+
+    <!--======GOOGLE FONT=======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--========================-->
+    <title>Mes cartes</title>
+    <link rel="stylesheet" href="cartes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="faviiiiii.ico" type="image/x-icon">
+
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 0;
+            padding-top: 80px; /* Espace pour compenser la hauteur du header */
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color:#3db03f;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-top img {
+            height: 40px;
+        }
+        .header-top .right-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-top .right-icons img {
+            height: 30px;
+        }
+        .header-top .right-icons img:first-child {
+            
+            margin-left: 25px;
+        }
+        .header-bottom {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff00;
+            padding: 10px 0;
+            border-top: 1px solid #dddddd00;
+        }
+        .header-bottom a {
+            text-decoration: none;
+            color: #fffefe;
+            font-weight: bold;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        .header-bottom a:hover {
+            background-color: #07660f;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .header-top img {
+                height: 30px;
+            }
+            .header-top .right-icons img {
+                height: 25px;
+            }
+            .header-bottom a {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-top img {
+                height: 25px;
+            }
+            .header-top .right-icons img {
+                height: 20px;
+            }
+            .header-bottom a {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <a href="Comptes.html"><img src="https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png" alt="Logo Banque"></a>
+            <div class="right-icons">
+                <a href="autres.html"><img src="notification.png" alt="Logo Notification"></a>
+                <a href="index.html"><img src="deconnexion.png" alt="Logo Déconnexion"></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="Comptes.html">Comptes</a>
+            <a href="emprunter.html">Emprunter</a>
+            <a href="epargner.html">Épargner</a>
+            <a href="assurer.html">Assurer</a>
+        </div>
+    </div>
+    <br>
+    
+
+
+
+
+    <!--=========LES CARTES DE CRÉDITS===========-->
+
+    <main>
+
+        
+        <div class="cards-wrapper">
+            <div class="cards-container">
+                <div class="card">
+                    <!-- Affichage de la carte Visa -->
+<div class="card-content">
+    <h2>Carte Visa Physique</h2>
+    <p>Solde: <span id="cardBalance"> €</span></p>
+    <p>Numéro de compte:  539-0075470-34</p>
+    <p>Expire à fin: 07 / 26</p>
+    <div class="visa-logo"><img src="visa.png" alt="" width="70px"></div>
+</div>
+
+<script>
+    // Initialisation du solde si non présent
+    if (!localStorage.getItem('balance')) {
+        localStorage.setItem('balance', '79706'); // Solde initial en EUR
+    }
+
+    // Fonction pour mettre à jour le solde
+    function updateCardBalance() {
+        const balance = localStorage.getItem('balance');
+        document.getElementById('cardBalance').innerText = `${balance} €`;
+    }
+
+    // Appeler la fonction pour afficher le solde initial
+    updateCardBalance();
+</script>
+
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Carte Visa Virtuelle</h2>
+                        
+                        <p>Solde: 0.00 €</p>
+                        <p>Numéro de carte:  539-0075470-34</p>
+                        <p>Expire à fin: 03 / 27</p>
+                        
+                        <div class="visa-logo"><img src="visa.png" alt="" width="70px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--=========LES LOGOS========-->
+    <div class="ligne-logos2">
+        <a href="virements.html" class="ologo1">
+            <div class="logo2">
+                <i class='bx bx-transfer-alt' style='color:#f34141'></i>
+                <div class="sous-titre2">Virements</div>
+            </div>
+        </a>
+
+        <a href="RIB_BNP_Paribas_Fortis_with_Logo.pdf" download="RIB" class="ologo2">
+            <div class="logo2">
+                <i class='bx bxs-download' style='color:#f34141'></i>
+                <div class="sous-titre2">Télécharger RIB</div>
+            </div>
+        </a>
+
+        <!-- Le bouton pour afficher les bordereaux -->
+<a href="Comptes.html" class="ologo3" id="infoLink">
+    <div class="logo2">
+        <i class='bx bx-home' style='color:#f34141'></i>
+        <div class="sous-titre2">Acceuil</div>
+    </div>
+</a>
+
+    </div> 
+</div>
+
+    <!--================HISTORIQUES DE TRANSACTIONS==================-->
+    <br>
+
+
+    <!-- Historique des transactions -->
+    <p class="hist">Historique des transactions</p>
+    <div class="transaction-history" id="transaction-history"></div>
+
+    <div class="transaction-history">
+        
+        
+        <div class="transaction">
+            <div class="transaction-logo">
+                <img src="virement.png" alt="Logo Transaction 3" width="30" height="30">
+            </div>
+            <div class="transaction-details">
+                <div class="transaction-label gray-text">virement reçu</div>
+                <div class="transaction-date">
+                    <span class="transaction-day">25</span>
+                    <span class="transaction-month">Mai</span>
+                    <span class="transaction-hour">09:10</span>
+                </div>
+            </div>
+            <div class="transaction-amount gray-text">+70.000€ </div>
+        </div>
+
+    
+    
+    
+
+<!-- Détails de la transaction -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const { jsPDF } = window.jspdf;
+    const historyContainer = document.getElementById('transaction-history');
+
+    // Fonction pour générer le PDF du reçu
+    async function generatePDF(label, amount, date) {
+        const doc = new jsPDF();
+        const senderBalance = localStorage.getItem('balance') || "700000";
+
+        const dateObj = new Date(date);
+        const formattedDate = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+        const formattedTime = `${dateObj.getHours()}:${dateObj.getMinutes() < 10 ? '0' + dateObj.getMinutes() : dateObj.getMinutes()}`;
+
+        doc.text('Bordereau de Virement', 10, 10);
+        doc.text('---------------------------------', 10, 20);
+        doc.text(`Date: ${formattedDate}`, 10, 30);
+        doc.text(`Heure: ${formattedTime}`, 10, 40);
+        doc.text(`Bénéficiaire: ${label}`, 10, 50);
+        doc.text(`Montant: ${amount} €`, 10, 60);
+        doc.text(`Solde Après Transaction: ${senderBalance} €`, 10, 70);
+        doc.text('---------------------------------', 10, 80);
+        doc.text('Merci de votre confiance.', 10, 90);
+
+        try {
+            const img = await fetch('https://stock.wikimini.org/w/images/7/7d/Logo_BNP_Paribas.png');
+            const imgBlob = await img.blob();
+            const imgUrl = URL.createObjectURL(imgBlob);
+            doc.addImage(imgUrl, 'PNG', 150, 10, 40, 20);
+        } catch (error) {
+            console.error('Erreur lors de l’ajout de l’image:', error);
+        }
+
+        return doc.output('blob');
+    }
+
+    // Fonction pour basculer les détails de la transaction
+    function toggleTransactionDetails(event) {
+        const transactionDiv = event.currentTarget.closest('.transaction');
+        if (transactionDiv) {
+            transactionDiv.classList.toggle('show-details');
+        }
+    }
+
+    // Fonction pour afficher les transactions
+    function displayTransactions() {
+        const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+
+        transactions.forEach((transaction, index) => {
+            const dateObj = new Date(transaction.date);
+            const formattedDate = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+            const formattedTime = `${dateObj.getHours()}:${dateObj.getMinutes() < 10 ? '0' + dateObj.getMinutes() : dateObj.getMinutes()}`;
+
+            const transactionDiv = document.createElement('div');
+            transactionDiv.className = 'transaction';
+            transactionDiv.innerHTML = `
+                <div class="transaction-header">
+                    <div class="transaction-label">${transaction.label}</div>
+                    <div class="transaction-date">${formattedDate} ${formattedTime}</div>
+                    <div class="transaction-amount">${transaction.amount} €</div>
+                </div>
+                <div class="transaction-details">
+                    <p><strong>Bénéficiaire:</strong> ${transaction.label}</p>
+                    <p><strong>Montant:</strong> ${transaction.amount} €</p>
+                    <p><strong>Date:</strong> ${formattedDate}</p>
+                    <p><strong>Heure:</strong> ${formattedTime}</p>
+                    <button class="download-receipt" data-index="${index}">Télécharger le reçu</button>
+                </div>
+            `;
+            historyContainer.appendChild(transactionDiv);
+        });
+    }
+
+    // Afficher les détails au clic
+    historyContainer.addEventListener('click', function(event) {
+        if (event.target.closest('.transaction-header')) {
+            toggleTransactionDetails(event);
+        }
+        if (event.target.classList.contains('download-receipt')) {
+            event.preventDefault();
+            const index = event.target.getAttribute('data-index');
+            const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+            const transaction = transactions[index];
+            generatePDF(transaction.label, transaction.amount, transaction.date).then(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'bordereau_virement.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }).catch(error => {
+                console.error('Erreur lors de la génération du PDF:', error);
+            });
+        }
+    });
+
+    // Initialiser les transactions
+    displayTransactions();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const transactions = document.querySelectorAll('.transaction');
+
+  transactions.forEach(transaction => {
+    transaction.addEventListener('click', () => {
+      // Toggle the 'show-details' class on click
+      transaction.classList.toggle('show-details');
+    });
+  });
+});
+
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+<!--===============================================-->
+ 
+
+    <!--======FOOTER========-->
+    <footer class="footer">
+        <div class="logo">
+          <a href="Comptes.html">
+            <i class='bx bx-home'></i>
+            <div class="sous-titre">Accueil</div>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="virements.html">
+            <i class='bx bx-transfer'></i>
+            <div class="sous-titre">Virements</div>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="cartes.html">
+            <i class='bx bx-credit-card'></i>
+            <div class="sous-titre">Cartes</div>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="contact.html">
+            <i class='bx bx-chat'></i>
+            <div class="sous-titre">Contact</div>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="autres.html">
+            <i class='bx bx-menu'></i>
+            <div class="sous-titre">Autres</div>
+          </a>
+        </div>
+      </footer>
+     
+    
+    
+        
+    
+        <script src="cartes.js"></script>
+        <script src="bordereau.js"></script>
+
+    </body>
+    </html>
+    

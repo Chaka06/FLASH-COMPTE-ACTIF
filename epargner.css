@@ -1,0 +1,183 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    
+    border-radius: 10px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #040202;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e90101;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#save h2 {
+    color: #e90101;
+    border-bottom: 2px solid #e90101;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.save-info {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.save-info h3 {
+    color: #e90101;
+    margin-bottom: 20px;
+}
+
+.save-info p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.save-info .account-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.save-info .account-status img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.save-info .account-status .status {
+    color: #e90101;
+    font-weight: bold;
+}
+
+button#contact-support {
+    background-color: #2ea526;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#contact-support:hover {
+    background-color: #016c05;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .save-info {
+        padding: 15px;
+    }
+
+    .save-info .account-status {
+        flex-direction: column;
+    }
+
+    .save-info .account-status img {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+/*==========FOOTER==========*/
+ /* Styles pour le footer */
+ .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e3e3e3;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Transition de couleur pour le texte */
+  }
+  
+  .logo a:hover {
+    color: red; /* Couleur rouge au survol */
+  }
+  
+  .logo i {
+    font-size: 24px; /* Taille de l'icône */
+    margin-bottom: 5px; /* Espace sous l'icône */
+  }
+  
+  .sous-titre {
+    font-size: 12px;
+  }

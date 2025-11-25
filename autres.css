@@ -1,0 +1,169 @@
+/*==========NOT DE LA BANQUE ET DOCUMENTS EN PDF=============
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f9f9f900;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    
+    border-radius: 10px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #e90101;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e90101;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #e90101;
+    border-bottom: 2px solid #e90101;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.news-item, .message-item, .document-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover, .message-item:hover, .document-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #310808;
+    margin: 0 0 10px;
+}
+
+p {
+    color: #555;
+}
+
+a {
+    color: #c70039;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========FOOTER==========*/
+  /* Styles généraux */
+
+  
+  /* Styles pour le footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e3e3e3;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Transition de couleur pour le texte */
+  }
+  
+  .logo a:hover {
+    color: red; /* Couleur rouge au survol */
+  }
+  
+  .logo i {
+    font-size: 24px; /* Taille de l'icône */
+    margin-bottom: 5px; /* Espace sous l'icône */
+  }
+  
+  .sous-titre {
+    font-size: 12px;
+  }
